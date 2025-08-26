@@ -18,87 +18,106 @@
     }
 
     body {
-      background-color: #f0f2f5;
+      background-color: #f7f8fa;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #222;
+      background: linear-gradient(135deg, #111, #444);
       color: #fff;
-      padding: 20px;
+      padding: 25px 15px;
       text-align: center;
       animation: fadeInDown 0.8s ease;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
     }
 
     nav ul {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       list-style: none;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
+      font-size: 1rem;
+      transition: color 0.3s, transform 0.2s;
     }
 
     nav a:hover {
-      color: #ccc;
+      color: #ff0000;
+      transform: translateY(-2px);
     }
 
     main {
-      max-width: 600px;
-      margin: 40px auto;
+      max-width: 650px;
+      margin: 50px auto;
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
       animation: fadeIn 1s ease;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: #222;
+      font-size: 1.8rem;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 18px;
     }
 
     input, textarea, select {
-      padding: 12px;
+      padding: 14px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #ffcb05;
+      box-shadow: 0 0 8px rgba(255, 203, 5, 0.4);
+      outline: none;
     }
 
     button {
-      padding: 12px;
+      padding: 14px;
       border: none;
-      background-color: #222;
+      background: linear-gradient(135deg, #ff0505, #f31212);
       color: white;
-      font-size: 1rem;
-      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: transform 0.2s, box-shadow 0.3s;
     }
 
     button:hover {
-      background-color: #444;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
     footer {
-      background-color: #222;
+      background: #111;
       color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9rem;
     }
 
     /* Animações */
