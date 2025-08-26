@@ -3,66 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Photo Star - Sobre</title>
+  <title>Agendamento | Photo Star</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset básico */
+    /* Reset e fonte base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f0f2f5;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
       background-color: #222;
       color: #fff;
       padding: 20px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
       text-align: center;
+      animation: fadeInDown 0.8s ease;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 10px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background 0.3s;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      background-color: #444;
+      color: #ccc;
     }
 
     main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease;
     }
 
-    main img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
-      border-radius: 10px;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      background-color: #222;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #444;
     }
 
     footer {
@@ -73,15 +101,15 @@
       margin-top: 40px;
     }
 
-    /* Botão flutuante */
-    .badge-bottom-right {
-      position: fixed;
-      right: 12px;
-      bottom: 16px;
-      width: 45px;
-      height: auto;
-      z-index: 1000;
-      cursor: pointer;
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -100,20 +128,29 @@
   </header>
 
   <main>
-    <h2>Sobre Nós</h2>
-    <p>Agende um fotógrafo para eventos especiais como aniversários, casamentos, reuniões familiares e muito mais. Capturamos momentos únicos com profissionalismo e criatividade.</p>
-    
-    <img src="https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/2C16/production/_90168211_neymar_getty.jpg" alt="Foto de exemplo" />
-    
-    <h2>Melhores Fotos</h2>
-    <img src="https://i.pinimg.com/750x/99/5d/d0/995dd0b340d2c16f21d53d7de6b93711.jpg" alt="Exemplo de foto profissional" />
+    <h2>Agende sua Sessão</h2>
+    <form action="https://formsubmit.co/seu-email@email.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="telefone" placeholder="Telefone para contato" required />
+      
+      <select name="tipo_evento" required>
+        <option value="">Selecione o tipo de evento</option>
+        <option value="Aniversário">Aniversário</option>
+        <option value="Casamento">Casamento</option>
+        <option value="Sessão Fotográfica">Sessão Fotográfica</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <textarea name="mensagem" rows="4" placeholder="Detalhes do evento (data, local, etc.)" required></textarea>
+
+      <button type="submit">Enviar Agendamento</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2025 Photo Star. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Imagem flutuante -->
-  <img class="badge-bottom-right" src="https://i.imgur.com/Qn6XUHN.png" alt="Ícone" />
 </body>
 </html>
