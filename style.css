@@ -105,8 +105,8 @@
       color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
-      font-size: 0.9rem;
+      margin-top: 40px;
+      font-size: 14px;
     }
 /* Responsividade */
 @media (max-width: 1024px) {
