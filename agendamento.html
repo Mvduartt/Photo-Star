@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Star</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+
+  <header>
+    <h1>Photo Star</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Informações</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="agendamento.html">Agendamento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Agende sua Sessão</h2>
+    <form action="https://formsubmit.co/seu-email@email.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="telefone" placeholder="Telefone para contato" required />
+      
+      <select name="tipo_evento" required>
+        <option value="">Selecione o tipo de evento</option>
+        <option value="Aniversário">Aniversário</option>
+        <option value="Casamento">Casamento</option>
+        <option value="Sessão Fotográfica">Sessão Fotográfica</option>
+        <option value="Outro">Outro</option>
+      </select>
+
+      <textarea name="mensagem" rows="4" placeholder="Detalhes do evento (data, local, etc.)" required></textarea>
+
+      <button type="submit">Enviar Agendamento</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Photo Star. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
